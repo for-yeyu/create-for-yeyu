@@ -29,6 +29,7 @@
     "ora": "^8.0.1"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.29.8",
     "@types/degit": "^2.8.6",
     "@types/fs-extra": "^11.0.4",
     "@types/inquirer": "^9.0.7",
