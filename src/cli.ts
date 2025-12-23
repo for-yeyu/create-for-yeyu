@@ -23,12 +23,12 @@ async function executeTemplate(
 
   if (template.type === "git") {
     if (fs.existsSync(targetPath)) {
-      logger.error(`目录 ${projectName} 已存在`);
+      logger.error(`Directory ${projectName} already exists`);
       process.exit(1);
     }
 
     if (!template.repo) {
-      logger.error("模板仓库地址未配置");
+      logger.error("Template repository not configured");
       process.exit(1);
     }
 
@@ -43,9 +43,9 @@ async function executeTemplate(
 
 function printSuccessMessage(projectName: string): void {
   console.log();
-  logger.success(chalk.green.bold("🎉 项目创建成功！"));
+  logger.success(chalk.green.bold("🎉 Project created successfully!"));
   console.log();
-  logger.log(chalk.cyan("  下一步:"));
+  logger.log(chalk.cyan("  Next steps:"));
   logger.log(`    cd ${chalk.yellow(projectName)}`);
   logger.log(`    ${chalk.yellow("pnpm install")}`);
   logger.log(`    ${chalk.yellow("pnpm dev")}`);
@@ -67,12 +67,12 @@ export async function run(): Promise<void> {
 
   program
     .name("for-yeyu")
-    .description("一个用于快速创建项目的脚手架工具")
+    .description("A CLI tool to scaffold projects from templates")
     .version(VERSION)
-    .argument("[project-name]", "项目名称")
+    .argument("[project-name]", "Project name")
     .option(
       "-t, --template <template>",
-      "指定模板 (nest, evm-dapp, vite, next)"
+      "Specify template (nest, evm-dapp, vite, next)"
     )
     .action(async (projectName: string | undefined, options: CLIOptions) => {
       printBanner();
@@ -88,8 +88,8 @@ export async function run(): Promise<void> {
         if (options.template) {
           const foundTemplate = getTemplateByValue(options.template);
           if (!foundTemplate) {
-            logger.error(`未找到模板: ${options.template}`);
-            logger.info("可用模板: nest, evm-dapp, vite, next");
+            logger.error(`Template not found: ${options.template}`);
+            logger.info("Available templates: nest, evm-dapp, vite, next");
             process.exit(1);
           }
           template = foundTemplate;

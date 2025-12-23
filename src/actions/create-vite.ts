@@ -2,7 +2,7 @@ import { execa } from "execa";
 import { logger } from "../utils/logger.js";
 
 export async function createViteProject(projectName: string): Promise<void> {
-  logger.info("正在调用 Vite 创建项目...");
+  logger.info("Creating project with Vite...");
   logger.log("");
 
   try {
@@ -12,7 +12,7 @@ export async function createViteProject(projectName: string): Promise<void> {
     });
   } catch (error) {
     if (error instanceof Error) {
-      logger.error(`Vite 项目创建失败: ${error.message}`);
+      logger.error(`Failed to create Vite project: ${error.message}`);
     }
     throw error;
   }

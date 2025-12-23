@@ -11,14 +11,14 @@ export async function promptProjectName(): Promise<string> {
     {
       type: "input",
       name: "projectName",
-      message: "请输入项目名称:",
+      message: "Enter project name:",
       default: "my-project",
       validate: (input: string) => {
         if (!input.trim()) {
-          return "项目名称不能为空";
+          return "Project name cannot be empty";
         }
         if (!/^[a-zA-Z0-9-_]+$/.test(input)) {
-          return "项目名称只能包含字母、数字、横线和下划线";
+          return "Project name can only contain letters, numbers, hyphens and underscores";
         }
         return true;
       },
@@ -48,14 +48,14 @@ export async function promptTemplate(): Promise<Template> {
     {
       type: "list",
       name: "templateValue",
-      message: "请选择项目模板:",
+      message: "Select a project template:",
       choices,
     },
   ]);
 
   const selectedTemplate = templates.find((t) => t.value === templateValue);
   if (!selectedTemplate) {
-    throw new Error(`未找到模板: ${templateValue}`);
+    throw new Error(`Template not found: ${templateValue}`);
   }
 
   return selectedTemplate;

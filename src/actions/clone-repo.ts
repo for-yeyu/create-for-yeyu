@@ -8,7 +8,7 @@ export async function cloneRepo(
   projectName: string
 ): Promise<void> {
   const targetPath = path.resolve(process.cwd(), projectName);
-  const spinner = createSpinner(`正在克隆模板 ${repo}...`);
+  const spinner = createSpinner(`Cloning template ${repo}...`);
 
   spinner.start();
 
@@ -20,9 +20,9 @@ export async function cloneRepo(
     });
 
     await emitter.clone(targetPath);
-    spinner.succeed("模板克隆成功！");
+    spinner.succeed("Template cloned successfully!");
   } catch (error) {
-    spinner.fail("模板克隆失败");
+    spinner.fail("Failed to clone template");
     if (error instanceof Error) {
       logger.error(error.message);
     }
