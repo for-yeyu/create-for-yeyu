@@ -63,7 +63,7 @@ export async function run(): Promise<void> {
   const program = new Command();
 
   program
-    .name("for-yeyu")
+    .name("create-for-yeyu")
     .description("A CLI tool to scaffold projects from templates")
     .version(VERSION)
     .argument("[project-name]", "Project name")
