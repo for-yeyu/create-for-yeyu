@@ -1,4 +1,5 @@
 import degit from "degit";
+import { execa } from "execa";
 import path from "node:path";
 import { createTrainAnimation } from "../utils/train-animation.js";
 import { logger } from "../utils/logger.js";
@@ -21,6 +22,9 @@ export async function cloneRepo(
 
     await emitter.clone(targetPath);
     train.stop(true, "Template cloned successfully!");
+
+    await execa("git", ["init"], { cwd: targetPath });
+    logger.success("Git repository initialized");
   } catch (error) {
     train.stop(false, "Failed to clone template");
     if (error instanceof Error) {
