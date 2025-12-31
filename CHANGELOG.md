@@ -1,5 +1,11 @@
 # create-for-yeyu
 
+## 3.0.1
+
+### Patch Changes
+
+- 29d920d: Auto-update package.json name field when cloning templates
+
 ## 3.0.0
 
 ### Major Changes
