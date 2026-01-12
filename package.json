@@ -23,7 +23,7 @@
   "author": "yeyu",
   "license": "MIT",
   "dependencies": {
-    "@inquirer/core": "^11.1.0",
+    "@inquirer/core": "^11.1.1",
     "@inquirer/prompts": "^7.2.1",
     "@inquirer/type": "^4.0.2",
     "chalk": "^5.3.0",
