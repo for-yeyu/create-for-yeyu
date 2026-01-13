@@ -15,8 +15,8 @@ importers:
         specifier: ^7.2.1
         version: 7.10.1(@types/node@20.19.27)
       '@inquirer/type':
-        specifier: ^4.0.2
-        version: 4.0.2(@types/node@20.19.27)
+        specifier: ^4.0.3
+        version: 4.0.3(@types/node@20.19.27)
       chalk:
         specifier: ^5.3.0
         version: 5.6.2
@@ -420,15 +420,6 @@ packages:
   '@inquirer/type@3.0.10':
     resolution: {integrity: sha512-BvziSRxfz5Ov8ch0z/n3oijRSEcEsHnhggm4xFZe93DHcUCTlutlq9Ox4SVENAfcRD22UQq7T/atg9Wr3k09eA==}
     engines: {node: '>=18'}
-    peerDependencies:
-      '@types/node': '>=18'
-    peerDependenciesMeta:
-      '@types/node':
-        optional: true
-
-  '@inquirer/type@4.0.2':
-    resolution: {integrity: sha512-cae7mzluplsjSdgFA6ACLygb5jC8alO0UUnFPyu0E7tNRPrL+q/f8VcSXp+cjZQ7l5CMpDpi2G1+IQvkOiL1Lw==}
-    engines: {node: '>=23.5.0 || ^22.13.0 || ^21.7.0 || ^20.12.0'}
     peerDependencies:
       '@types/node': '>=18'
     peerDependenciesMeta:
@@ -1649,10 +1640,6 @@ snapshots:
       '@types/node': 20.19.27
 
   '@inquirer/type@3.0.10(@types/node@20.19.27)':
-    optionalDependencies:
-      '@types/node': 20.19.27
-
-  '@inquirer/type@4.0.2(@types/node@20.19.27)':
     optionalDependencies:
       '@types/node': 20.19.27
 
