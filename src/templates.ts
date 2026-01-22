@@ -15,6 +15,13 @@ export const templates: Template[] = [
     repo: "NeilYeTAT/nest-app-starter-for-yeyu",
   },
   {
+    name: "Next Web App Starter",
+    value: "next-web-app",
+    description: "Next Web App starter template",
+    type: "git",
+    repo: "NeilYeTAT/next-web-app-starter-for-yeyu",
+  },
+  {
     name: "EVM DApp Starter",
     value: "evm-dapp",
     description: "EVM DApp starter template",

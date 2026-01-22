@@ -43,6 +43,9 @@ npx create-for-yeyu my-project
 # 使用 NestJS 模板
 npx create-for-yeyu my-project --template nest
 
+# 使用 Next Web App 模板
+npx create-for-yeyu my-project --template next-web-app
+
 # 使用 EVM DApp 模板
 npx create-for-yeyu my-project --template evm-dapp
 
@@ -55,12 +58,13 @@ npx create-for-yeyu my-project --template next
 
 ## 可用模板
 
-| 模板名称         | 命令参数   | 说明                 |
-| ---------------- | ---------- | -------------------- |
-| NestJS Starter   | `nest`     | NestJS 应用启动模板  |
-| EVM DApp Starter | `evm-dapp` | EVM DApp 启动模板    |
-| Vite             | `vite`     | 使用 Vite 官方模板   |
-| Next.js          | `next`     | 使用 Create Next App |
+| 模板名称             | 命令参数       | 说明                  |
+| -------------------- | -------------- | --------------------- |
+| NestJS Starter       | `nest`         | NestJS 应用启动模板   |
+| Next Web App Starter | `next-web-app` | Next Web App 启动模板 |
+| EVM DApp Starter     | `evm-dapp`     | EVM DApp 启动模板     |
+| Vite                 | `vite`         | 使用 Vite 官方模板    |
+| Next.js              | `next`         | 使用 Create Next App  |
 
 ## 界面预览
 
