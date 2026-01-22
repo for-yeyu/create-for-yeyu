@@ -2,7 +2,7 @@ import degit from "degit";
 import { execa } from "execa";
 import path from "node:path";
 import fsExtra from "fs-extra";
-import { createTrainAnimation } from "../utils/train-animation.js";
+import { createNyanCatAnimation } from "../utils/nyan-cat.js";
 import { logger } from "../utils/logger.js";
 
 export interface CloneRepoOptions {
@@ -44,9 +44,15 @@ export async function cloneRepo(
 ): Promise<void> {
   const { initGit = true } = options;
   const targetPath = path.resolve(process.cwd(), projectName);
-  const train = createTrainAnimation(`Cloning template ${repo}...`);
+  const animation = createNyanCatAnimation(`Cloning template ${repo}...`);
 
-  train.start();
+  animation.start();
+
+  const timeoutId = setTimeout(() => {
+    animation.updateMessage(
+      `😿 Cloning template ${repo}... (It's taking a while, maybe check your proxy?) miao~`
+    );
+  }, 5000);
 
   try {
     const emitter = degit(repo, {
@@ -56,7 +62,8 @@ export async function cloneRepo(
     });
 
     await emitter.clone(targetPath);
-    train.stop(true, "Template cloned successfully!");
+    clearTimeout(timeoutId);
+    animation.stop(true, "Template cloned successfully!");
 
     await updatePackageJsonName(targetPath, projectName);
 
@@ -71,7 +78,8 @@ export async function cloneRepo(
       logger.success("Git repository initialized with initial commit");
     }
   } catch (error) {
-    train.stop(false, "Failed to clone template");
+    clearTimeout(timeoutId);
+    animation.stop(false, "Failed to clone template");
     if (error instanceof Error) {
       logger.error(error.message);
     }

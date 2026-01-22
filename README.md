@@ -9,7 +9,7 @@
 - 支持 Create Next App
 - 交互式命令行界面
 - 随机小猫欢迎界面，显示用户名和当前日期
-- Clone 时显示 ASCII 火车动画
+- Clone 时显示 Nyan Cat 彩虹猫动画
 
 ## 安装
 
@@ -68,22 +68,20 @@ npx create-for-yeyu my-project --template next
 
 ## 界面预览
 
-启动时会显示小猫欢迎界面：
+启动时会显示随机小猫欢迎界面：
 
 ```
  ______________________________
-/ Hello!              \
-\ Today is 2026-01-22 Thursday /
+/ Hello, username!             \
+\ Today is 2024-12-23 Monday   /
  ------------------------------
-
                             ╱|、
                           (˚ˎ 。7
                            |、˜〵
                           じしˍ,)ノ
-
 ```
 
-Clone 模板时会显示 ASCII 火车动画，灵感来自经典的 sl 命令。
+Clone 模板时会显示 Nyan Cat 彩虹猫动画。
 
 ## 开发
 
@@ -118,7 +116,7 @@ create-for-yeyu/
 │       ├── logger.ts         # 日志工具
 │       ├── spinner.ts        # 加载动画
 │       ├── cats.ts           # 小猫欢迎界面工具
-│       └── train-animation.ts # 火车动画
+│       └── nyan-cat.ts       # Nyan Cat 动画
 ├── package.json
 ├── tsconfig.json
 └── README.md
