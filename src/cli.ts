@@ -11,7 +11,7 @@ import { cloneRepo } from "./actions/clone-repo.js";
 import { createViteProject } from "./actions/create-vite.js";
 import { createNextProject } from "./actions/create-next.js";
 import { logger } from "./utils/logger.js";
-import { cowsay, getGreetingMessage } from "./utils/cowsay.js";
+import { catSay, getGreetingMessage } from "./utils/cats.js";
 import { removeDirectory } from "./utils/resolve-project-name.js";
 
 const VERSION = "1.0.0";
@@ -59,7 +59,7 @@ function printSuccessMessage(projectName: string): void {
 
 function printBanner(): void {
   console.log();
-  console.log(chalk.cyan(cowsay(getGreetingMessage())));
+  console.log(chalk.cyan(catSay(getGreetingMessage())));
   console.log();
 }
 

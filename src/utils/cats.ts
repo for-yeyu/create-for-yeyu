@@ -1,6 +1,21 @@
 import os from "node:os";
 
-export function cowsay(text: string): string {
+// * 好吧，是在找不到很多合适的终端猫猫
+const cats = [
+  `
+                            ╱|、
+                          (˚ˎ 。7  
+                           |、˜〵          
+                          じしˍ,)ノ
+
+`,
+];
+
+function getRandomCat(): string {
+  return cats[Math.floor(Math.random() * cats.length)];
+}
+
+export function catSay(text: string): string {
   const lines = text.split("\n");
   const maxLength = Math.max(...lines.map((line) => line.length));
   const paddedLines = lines.map((line) => line.padEnd(maxLength));
@@ -25,15 +40,8 @@ export function cowsay(text: string): string {
     bubble.push(bottom);
   }
 
-  const cow = [
-    "        \\   ^__^",
-    "         \\  (oo)\\_______",
-    "            (__)\\       )\\/\\",
-    "                ||----w |",
-    "                ||     ||",
-  ];
-
-  return [...bubble, ...cow].join("\n");
+  const cat = getRandomCat();
+  return [...bubble, cat].join("\n");
 }
 
 export function getFormattedDate(): string {

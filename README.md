@@ -8,7 +8,7 @@
 - 支持 Vite 官方模板
 - 支持 Create Next App
 - 交互式命令行界面
-- Cowsay 风格的欢迎界面，显示用户名和当前日期
+- 随机小猫欢迎界面，显示用户名和当前日期
 - Clone 时显示 ASCII 火车动画
 
 ## 安装
@@ -68,18 +68,19 @@ npx create-for-yeyu my-project --template next
 
 ## 界面预览
 
-启动时会显示 Cowsay 风格的欢迎界面：
+启动时会显示小猫欢迎界面：
 
 ```
  ______________________________
-/ Hello, username!             \
-\ Today is 2024-12-23 Monday   /
+/ Hello!              \
+\ Today is 2026-01-22 Thursday /
  ------------------------------
-        \   ^__^
-         \  (oo)\_______
-            (__)\       )\/ \
-                ||----w |
-                ||     ||
+
+                            ╱|、
+                          (˚ˎ 。7
+                           |、˜〵
+                          じしˍ,)ノ
+
 ```
 
 Clone 模板时会显示 ASCII 火车动画，灵感来自经典的 sl 命令。
@@ -116,7 +117,7 @@ create-for-yeyu/
 │   └── utils/
 │       ├── logger.ts         # 日志工具
 │       ├── spinner.ts        # 加载动画
-│       ├── cowsay.ts         # Cowsay 工具
+│       ├── cats.ts           # 小猫欢迎界面工具
 │       └── train-animation.ts # 火车动画
 ├── package.json
 ├── tsconfig.json
