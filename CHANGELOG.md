@@ -1,5 +1,14 @@
 # create-for-yeyu
 
+## 3.1.0
+
+### Minor Changes
+
+- 3e2df00: feat: Add Next Web App Starter template
+  feat: Replace Cowsay with random cat welcome message
+  feat: Replace train animation with Nyan Cat animation
+  feat: Add timeout warning for clone operation
+
 ## 3.0.1
 
 ### Patch Changes
