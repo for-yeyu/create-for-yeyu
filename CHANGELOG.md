@@ -1,5 +1,11 @@
 # create-for-yeyu
 
+## 3.2.0
+
+### Minor Changes
+
+- update repo address
+
 ## 3.1.0
 
 ### Minor Changes
